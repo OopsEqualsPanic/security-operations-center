@@ -8,6 +8,10 @@ https://fedoraproject.org/iot/download/
 I went with Fedora IoT (OSTree) under the AMD x86_64 section since that is my hardware.
 After verifying the .iso, I proceeded to installation.
 
+> Notes:
+> 1) It's recommended to choose LUKS full disk encryption so the operating system's data is encrypted at rest.
+> 2) During installation I enabled the root account for privileged operation capabilities, since we will need it eventually.
+
 # 2) Rebasing to Secureblue
 
 Secureblue is a set of security-focused patches and hardening that can either be applied to base Fedora images or installed as a standalone desktop operating system.
@@ -31,7 +35,7 @@ To enable cockpit, you can simply follow the instructions at https://cockpit-pro
 
 Since our system is using rpm-ostree instead of dnf, we will need to install cockpit's rpm packages.
 ```
-$ rpm-ostree install cockpit-system cockpit-podman cockpit-ostree
+$ rpm-ostree install cockpit-system cockpit-machines cockpit-podman cockpit-ostree cockpit-networkmanager cockpit-files
 ```
 After installing, the system requires a reboot.
 
