@@ -42,7 +42,8 @@ The deployment includes:
 | Project Steps | Link |
 |---------------|------|
 | Installation | [View](docs/installation.md) |
-| Configuration | [View]() |
+| Hypervisor Security | [View](docs/security.md) |
+| Configuration | To-Do |
 
 
 ## Architecture Diagram
