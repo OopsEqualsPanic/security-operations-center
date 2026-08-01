@@ -16,3 +16,24 @@ The following is a list of hardened kernel arguments we will be adding to the sy
 | ``gather_data_sampling=force`` | Enables microcode mitigation against the Gather Data Sampling vulnerability, which can allow attackers to infer sensitive data from vector registers. |
 | ``mem_encrypt=on`` | Activates Secure Memory Encryption, which encrypts individual pages of memory to protect against physical attacks. |
 | ``oops=panic`` | Causes the kernel to panic instead of continuing to run when encountering certain errors, preventing attackers from exploiting a compromised kernel. |
+
+To enable all of these, Secureblue provides a convenient setup script: ``ujust set-kargs-hardening``.
+
+```
+$ ujust set-kargs-hardening
+
+Do you need support for 32-bit processes/syscalls? (This is mostly
+used by legacy software, with some exceptions, such as Steam.) [y/n] n
+Selected: disable 32-bit support.
+
+Do you want to force disable Simultaneous Multithreading (SMT) /
+Hyperthreading? (This can cause a reduction in the performance of
+certain tasks in favor of security. Note that in most hardware SMT
+will be disabled anyways to mitigate a known vulnerability; this turns
+it off on all hardware regardless.) [y/n] n
+Selected: do not force disable SMT/hyperthreading.
+
+Would you like to set additional (unstable) hardening kernel
+arguments? (Warning: Setting these kernel arguments may lead to boot
+or stability issues on some hardware.) [y/n] y
+```
