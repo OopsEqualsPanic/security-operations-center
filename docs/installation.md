@@ -7,10 +7,13 @@ https://fedoraproject.org/iot/download/
 
 Fedora IoT (OSTree) under the AMD x86_64 section will be our main choice.
 After verifying the .iso, proceed to installation.
+Fedora Media Writer is recommended for making a bootable USB.
+https://docs.fedoraproject.org/en-US/fedora/latest/preparing-boot-media/
 
 > Notes:
 > 1) It's recommended to choose LUKS full disk encryption so the operating system's data is encrypted at rest.
 > 2) During installation you will need to enable the root account for privileged operation capabilities, since we will need it eventually.
+> 3) Installing without a WiFi or Ethernet configuration is not recommended as further steps require internet access.
 
 # 2) Rebasing to Secureblue
 
