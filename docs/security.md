@@ -8,7 +8,7 @@ The following is a list of hardened kernel arguments we will be adding to the sy
 | Argument | Description |
 |----------|-------------|
 | ``ia32_emulation=0`` | Disables support of 32-bit applications, which we will not be using anyway. |
-| ``nosmt=force`` | Force-disables simultaneous multi-threading by halving the CPU. Discretion advised. |
+| ``nosmt=force`` | Force-disables simultaneous multi-threading by halving the number of CPU cores, which could prevent some side-channel attacks and information leaks. Not recommended to add. |
 | ``amd_iommu=force_isolation`` | Forbids the IOMMU (Input/Output Memory Management Unit) driver from lifting isolation requirements for devices, preventing Direct Memory Access attacks. May cause issues on some hardware. |
 | ``bdev_allow_write_mounted=0`` | Disables writes to mounted block devices to prevent filesystem corruption/crashes. |
 | ``debugfs=off`` | Disables debugfs to prevent exposing kernel information to users, which would aid attackers. |
