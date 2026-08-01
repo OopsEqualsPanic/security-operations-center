@@ -19,7 +19,8 @@ For our installation, the instructions advise to rebase from Fedora IoT to Secur
 
 ![Screenshot](images/secureblue_images.png)
 
-``iot-main-hardened`` is the correct one assuming you're not running on nvidia hardware. since I did not have nvidia hardware.
+``iot-main-hardened`` is the correct one assuming you're not running on nvidia hardware.
+
 Rebase by running:
 
 ```
