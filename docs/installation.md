@@ -7,7 +7,9 @@ https://fedoraproject.org/iot/download/
 
 Fedora IoT (OSTree) under the AMD x86_64 section will be our main choice.
 After verifying the .iso, proceed to installation.
+
 Fedora Media Writer is recommended for making a bootable USB.
+
 https://docs.fedoraproject.org/en-US/fedora/latest/preparing-boot-media/
 
 > Notes:
