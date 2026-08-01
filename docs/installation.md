@@ -75,13 +75,4 @@ If you want to connect using a hostname instead of the system's current internal
 This is because mDNS is insecure by design, allowing any and all devices on the current network to announce any name or service. 
 
 Give the system a static IP address on its local area network, then modify the /etc/hosts file to include a hostname with the IP.
-
-
-# 2) Configuring Virtual Machines
-
-We're going to create 3 total virtual machines for this setup using the Proxmox web interface. 
-| VM | Operating System | Identity |
-|---------|--------------|------------|
-| VM 1 | Secureblue Server (based on Fedora Atomic) | SIEM Host |
-| VM 2 | Windows 11 | Endpoint |
-| VM 3 | Windows 11 | Endpoint |
+Another option is adding your own DNS on the network the host is running on.
