@@ -121,5 +121,5 @@ $ firewall-cmd --list-services
 If you want to connect using a hostname instead of the system's current internal IP address (192.168.x.x), using the avahi-daemon is not recommended.
 This is because mDNS is insecure by design, allowing any and all devices on the current network to announce any name or service. 
 
-Give the system a static IP address on its local area network, then modify the /etc/hosts file to include a hostname with the IP.
+It's recommended to give the system a static IP address on its local area network.
 Another option is adding your own DNS on the network the host is running on.
