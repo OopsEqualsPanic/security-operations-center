@@ -7,7 +7,7 @@ Since Secureblue comes with a plethora of different options for securing the sys
 The following is a list of hardened kernel arguments we will be adding to the system:
 | Argument | Description |
 |----------|-------------|
-| ``ia32_emulation=0`` | Allows support of 32-bit applications, which we will not be using. |
+| ``ia32_emulation=0`` | Disables support of 32-bit applications, which we will not be using anyway. |
 | ``nosmt=force`` | Force-disables simultaneous multi-threading by halving the CPU. Discretion advised. |
 | ``amd_iommu=force_isolation`` | Forbids the IOMMU (Input/Output Memory Management Unit) driver from lifting isolation requirements for devices, preventing Direct Memory Access attacks. May cause issues on some hardware. |
 | ``bdev_allow_write_mounted=0`` | Disables writes to mounted block devices to prevent filesystem corruption/crashes. |
