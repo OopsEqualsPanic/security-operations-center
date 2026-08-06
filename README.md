@@ -19,8 +19,6 @@ This project demonstrates the deployment, configuration, and operation of a secu
 
 ## Reasoning
 I wanted to actually apply my theoretical knowledge and current experience in information technology and cybersecurity to create something that I will keep using daily as I advance in my career.
-Deploying a comprehensive stack for self-hosted technologies is also a great way to monitor, improve, and secure them. 
-
 
 ## Project Overview
 
