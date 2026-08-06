@@ -38,7 +38,7 @@ arguments? (Warning: Setting these kernel arguments may lead to boot
 or stability issues on some hardware.) [y/n] y
 ```
 
-2) Securing the Bash Environment
+# 2) Securing the Bash Environment
 
 To give you a bit of context, LD_PRELOAD is an environment variable that allows one to load shared libraries before others, enabling you to override default functions in programs.
 
