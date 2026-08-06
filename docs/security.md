@@ -44,7 +44,7 @@ To give you a bit of context, LD_PRELOAD is an environment variable that allows 
 
 When this environment variable is hijacked to load an attacker-controlled library, it can result in unintended behavior of normal programs. 
 
-For example, an attacker could preload a custom library that modifies the output of the ls command to hide malware from appearing in its output. We don't want this.
+For example, an attacker could preload a custom library that modifies the output of the "ls" command to hide malware from appearing in its output. We don't want this.
 
 We can lock down the bash environment to prevent LD_PRELOAD attacks by executing the following command: 
 ```
