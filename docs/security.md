@@ -42,7 +42,7 @@ or stability issues on some hardware.) [y/n] y
 
 To give you a bit of context, LD_PRELOAD is an environment variable that allows one to load shared libraries before others, enabling you to override default functions in programs.
 
-When this environment variable is hijacked to load, say, an attacker-controlled library, it modifies the default behavior of normal programs.
+When this environment variable is hijacked to load an attacker-controlled library, it can result in unintended behavior of normal programs. 
 
 For example, an attacker could preload a custom library that modifies the output of the ls command to hide malware from appearing in its output. We don't want this.
 
