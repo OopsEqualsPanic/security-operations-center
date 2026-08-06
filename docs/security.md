@@ -37,3 +37,21 @@ Would you like to set additional (unstable) hardening kernel
 arguments? (Warning: Setting these kernel arguments may lead to boot
 or stability issues on some hardware.) [y/n] y
 ```
+
+2) Securing the Bash Environment
+
+To give you a bit of context, LD_PRELOAD is an environment variable that allows one to load shared libraries before others, enabling you to override default functions in programs.
+
+When this environment variable is hijacked to load, say, an attacker-controlled library, it modifies the default behavior of normal programs.
+
+For example, an attacker could preload a custom library that modifies the output of the ls command to hide malware from appearing in its output. We don't want this.
+
+We can lock down the bash environment to prevent LD_PRELOAD attacks by executing the following command: 
+```
+ujust toggle-bash-environment-lockdown
+```
+What this script does is fetch the current list of users on the system using UIDs from /etc/login.defs and stores them in uid_min and uid_max. Usernames are then taken via user_string and each user's home directory has its bash environment locked down.
+
+It's also important to mention that an attacker can also gain root and modify the /etc/ld.so.preload file, and preload their own libraries that persist even when you lock your bash environment down.
+
+It's imperative that you ensure the security of your system from the top going down. If disabling root is within reach, use it. Likewise, disabling or replacing privilege escalation vectors is also recommended, such as replacing set-UID root binaries (binaries that always run as root) with non-root alternatives.
