@@ -58,7 +58,7 @@ It's imperative that you ensure the security of your system from the top going d
 
 # 3) Creating an Administrator Account
 
-It's not recommended to constantly authenticate as root, so we will be creating an admin account. 
+It's not recommended to constantly ask the regular user account to authenticate, so we will be creating an administrator account. 
 
 To do this, you can either go through your own process of adding an admin account using the "useradd" command and revoking wheel permissions for the regular user, or use: 
 
