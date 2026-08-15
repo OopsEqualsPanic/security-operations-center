@@ -55,3 +55,14 @@ What this script does is fetch the current list of users on the system using UID
 It's also important to mention that an attacker can also gain root and modify the /etc/ld.so.preload file, and preload their own libraries that persist even when you lock your bash environment down.
 
 It's imperative that you ensure the security of your system from the top going down. If disabling root is within reach, use it. Likewise, disabling or replacing privilege escalation vectors is also recommended, such as replacing set-UID root binaries (binaries that always run as root) with non-root alternatives.
+
+# 3) Creating an Administrator Account
+
+It's not recommended to constantly authenticate as root, so we will be creating an admin account. 
+
+To do this, you can either go through your own process of adding an admin account using the "useradd" command and revoking wheel permissions for the regular user, or use: 
+
+```
+ujust create-admin
+```
+Now every time you use run0 or authenticate, it will prompt the administrator account instead of asking for the user's sudo (run0) permissions.
