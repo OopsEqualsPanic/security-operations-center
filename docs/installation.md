@@ -101,7 +101,7 @@ $ run0 systemctl try-restart sshd
 
 Before running the next command, podman needs to trust the podman image being offered, otherwise it will fail to install.
 ```
-$ podman image trust set -t accept quay.io/cockpit/ws
+$ run0 podman image trust set -t accept quay.io/cockpit/ws
 ```
 
 Now running the command works (run as root):
@@ -111,16 +111,16 @@ $ run0 podman container runlabel --name cockpit-ws RUN quay.io/cockpit/ws
 
 Then we can make it start on boot:
 ```
-$ podman container runlabel INSTALL quay.io/cockpit/ws
+$ run0 podman container runlabel INSTALL quay.io/cockpit/ws
 $ systemctl enable cockpit.service
 $ systemctl start cockpit.service
 ```
 
 After it starts, you may not be able to access cockpit at first due to firewalld blocking the connection. Simply run:
 ```
-$ firewall-cmd --add-service=cockpit --permanent
-$ firewall-cmd --reload
-$ firewall-cmd --list-services
+$ run0 firewall-cmd --add-service=cockpit --permanent
+$ run0 firewall-cmd --reload
+$ run0 firewall-cmd --list-services
 ```
 
 If you want to connect using a hostname instead of the system's current internal IP address (192.168.x.x), using the avahi-daemon is not recommended.
